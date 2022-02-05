@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    background-color: #1a1a13;
+    color: #f4f3f4;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0px;
+    border-bottom: 1px solid #fafafa;
+}
+
+.nav-logo img {
+    width: 45px;
+    height: 45px;
+}
+
+
+.div .nav-link {
+    text-decoration: none;
+    color: inherit;
+    padding: 15px;
+}
+
+.nav-link:hover {
+    background-color: #09090f;
+    border-radius: 5px;
+}
+
+.main {
+    display: flex;
+    height: 90%;
+    position: relative;
+    overflow: hidden;
+}
+
+.section {
+    width: 50vw;
+}
+.second {
+    transform: skew(-8deg);
+    /* width: 67vw; */
+    z-index: 1;
+    position: absolute;
+    right: -90px;
+    height: 100%;
+    bottom: 0;
+    background-color: #09090f;
+    overflow: hidden;
+}
+.second img {
+    transform: skew(8deg);
+    position: relative;
+    bottom: -170px;
+}
+
+.intro {
+    padding: 275px 50px;
+    line-height: 1.5em;
+    font-size: 50px;
+}
+
+.div {
+    display: flex;
+}
+
+.menu, .cls {
+    cursor: pointer;
+    font-size: 24px;
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .div {
+        position: fixed;
+        height: 100%;
+        width: 0;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #09090f;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        display: block;
+    }
+    .menu {
+        display: block;
+    }
+    .cls {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+    .div a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #f4f3f4;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .intro {
+        font-size: 30px;
+    }
+}
